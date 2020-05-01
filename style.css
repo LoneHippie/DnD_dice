@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body { height: 100%; }
+
+body {
+    
+    background: linear-gradient(
+        rgb(175, 144, 86),
+        rgb(109, 97, 29)
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    height: 100%;
+    margin: 0px 2rem;
+    background: linear-gradient(
+        rgba(201, 185, 116, 0.39),
+        rgba(165, 122, 42, 0.87)),
+        url(./img/border-gold.png),
+        url(./img/back.jpg);
+        
+    background-position: top;
+    background-size: cover;
+    border-left: 4px solid rgba(214, 190, 85, 0.5);
+    border-right: 4px solid rgb(214, 190, 85, 0.5);
+    border-top: 2px solid rgb(214, 190, 85, 0.5);
+    border-bottom: 2px solid rgb(214, 190, 85, 0.5);;
+}
+
+/* HEADER */
+
+header {
+    position: relative;
+    text-align: center;
+    margin-top: 2rem;
+    height: 50vh;
+}
+.header-text {
+    position: relative;
+    margin: auto;
+    top: 2rem;
+    font-size: 5rem;
+    color: rgba(172, 153, 66, 0.76);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgba(131, 111, 24, 0.959);
+}
+
+/* DICE/BUTTONS/INPUTS */
+
+.dice-table {
+    margin-top: -10rem;
+}
+
+ul {
+    position: relative;
+    text-align: center;
+    list-style-type: none;
+    -webkit-padding-start: 0;
+}
+
+li {
+    display: inline-block;
+    list-style: none;
+    margin: 2rem 2rem;
+}
+
+.btn-dice {
+    height: 7.5rem;
+    border: solid 3px rgba(172, 153, 66, 0.76);
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    transform-origin: center;
+    box-shadow: 10px 7.5px 13px rgba(31, 30, 30, 0.562);
+
+    transition: all 300ms;
+}
+.btn-dice:hover {
+    transform: translateY(-1.1rem);
+    box-shadow: 8px 15px 18px rgba(31, 30, 30, 0.445);
+
+    transition: all 300ms;
+}
+.btn-dice:active {
+    transform: translateY(-0.9rem);
+    transform: rotate(10deg);
+    box-shadow: 8px 12px 15px rgba(31, 30, 30, 0.486);
+
+    transition: all 150ms;
+}
+.btn-dice:focus {
+    outline: none;
+}
+
+.amt-mod {
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 5rem;
+    height: 2rem;
+    font-size: 1.4rem;
+    padding-left: 15px;
+    
+    border-radius: 2rem;
+    background-color: rgba(65, 33, 18, 0.37);
+    color: #fff;
+    border: solid 2px rgba(172, 153, 66, 0.76);
+
+    box-shadow: 7.5px 5px 15px rgba(31, 30, 30, 0.562);
+}
+.amt-mod::placeholder {
+    color: rgba(255, 255, 255, 0.658);
+}
+.amt-mod:focus {
+    outline: none;
+}
+
+/* ROLL DISPLAY */
+
+.roll-display {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.last-roll {
+    font-size: 3rem;
+    color: rgba(172, 153, 66, 0.897);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgba(131, 111, 24, 0.959);
+    background-color: rgba(131, 111, 24, 0.349);
+    border: solid 0.25rem rgba(172, 153, 66, 0.959);
+    border-radius: 2rem;
+    padding: 0 2rem;
+
+    box-shadow: 7.5px 5px 15px rgba(48, 48, 23, 0.493);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1245px) {
+    .dice-table {
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    header {
+        margin-top: 0.7rem;
+        height: 45vh;
+    }
+    .header-text {
+        top: 0.5rem;
+    }
+    li {
+        margin: 1.75rem 1.75rem;
+    }
+    .btn-dice {
+        height: 7rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    header {
+        margin-top: 0.7rem;
+        height: 45vh;
+    }
+    .header-text {
+        top: 0.5rem;
+    }
+    li {
+        margin: 1.5rem 1.5rem;
+    }
+    .btn-dice {
+        height: 6.5rem;
+    }
+}
+
+@media screen and (max-width: 1059px) {
+    .btn-dice {
+        height: 6.2rem;
+    }
+    .btn-dice {
+        margin-bottom: 0.5rem
+    }
+}
+
+@media screen and (max-width: 650px) {
+    header {
+        margin-top: 0.7rem;
+        height: 45vh;
+    }
+    .header-text {
+        top: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    main {
+        margin: 0px 1.75rem;
+    }
+    header {
+        margin-top: 0.7rem;
+        height: 40vh;
+    }
+    .header-text {
+        top: 0.5rem;
+        font-size: 4.2rem;
+    }
+    li {
+        margin: 1.5rem 1.5rem;
+    }
+    .btn-dice {
+        height: 5rem;
+    }
+
+    .btn-dice:hover {
+        transform: translateY(-0.8rem);
+        box-shadow: 8px 15px 18px rgba(31, 30, 30, 0.445);
+    
+        transition: all 300ms;
+    }
+    .btn-dice:active {
+        transform: translateY(-0.45rem);
+        transform: rotate(10deg);
+        box-shadow: 8px 12px 15px rgba(31, 30, 30, 0.486);
+    
+        transition: all 150ms;
+    }
+
+    .amt-mod {
+        width: 4.5rem;
+        height: 1.8rem;
+        font-size: 1.2rem;
+        padding-left: 8px;
+    }
+
+    .last-roll {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 464px) {
+    main {
+        margin: 0px 1.5rem;
+    }
+    header {
+        margin-top: 0.7rem;
+        height: 45vh;
+    }
+    .header-text {
+        top: 0.5rem;
+        font-size: 4.2rem;
+    }
+
+    li {
+        margin: 1rem 1rem;
+    }
+    .btn-dice {
+        height: 4.5rem;
+    }
+
+    .amt-mod {
+        width: 4.5rem;
+        height: 1.8rem;
+        font-size: 1.2rem;
+        padding-left: 8px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    main {
+        margin: 0px 0.75rem;
+    }
+    header {
+        margin-top: 1.4rem;
+        height: 45vh;
+    }
+    .header-text {
+        top: 1rem;
+        font-size: 3.75rem;
+    }
+
+    li {
+        margin: 0.75rem 0.75rem;
+    }
+    .btn-dice {
+        height: 4.5rem;
+    }
+
+    .amt-mod {
+        width: 4.2rem;
+        height: 1.7rem;
+        font-size: 1.15rem;
+        padding-left: 6px;
+    }
+
+    .last-roll {
+        font-size: 2.25rem;
+        margin: 0px 1.5rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    main {
+        margin: 0px 0.65rem;
+    }
+    header {
+        margin-top: 1.3rem;
+        height: 45vh;
+    }
+    .header-text {
+        top: 1rem;
+        font-size: 3.75rem;
+    }
+
+    li {
+        margin: 0.7rem 0.7rem;
+    }
+    .btn-dice {
+        height: 4.1rem;
+    }
+
+    .amt-mod {
+        width: 4.2rem;
+        height: 1.7rem;
+        font-size: 1.15rem;
+        padding-left: 6px;
+    }
+
+    .roll-display {
+        margin-top: 3.5rem;
+    }
+}
