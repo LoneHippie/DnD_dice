@@ -7,7 +7,6 @@
 html, body { height: 100%; }
 
 body {
-    
     background: linear-gradient(
         rgb(175, 144, 86),
         rgb(109, 97, 29)
@@ -76,7 +75,7 @@ li {
     border-radius: 2rem;
     margin-bottom: 1rem;
     transform-origin: center;
-    box-shadow: 10px 7.5px 13px rgba(31, 30, 30, 0.562);
+    box-shadow: 10px 7.5px 12px rgba(31, 30, 30, 0.562);
 
     transition: all 300ms;
 }
@@ -89,7 +88,7 @@ li {
 .btn-dice:active {
     transform: translateY(-0.9rem);
     transform: rotate(10deg);
-    box-shadow: 8px 12px 15px rgba(31, 30, 30, 0.486);
+    box-shadow: 7px 10px 14.5px rgba(31, 30, 30, 0.486);
 
     transition: all 150ms;
 }
@@ -107,9 +106,9 @@ li {
     padding-left: 15px;
     
     border-radius: 2rem;
-    background-color: rgba(65, 33, 18, 0.37);
+    background-color: rgba(100, 82, 30, 0.37);
     color: #fff;
-    border: solid 2px rgba(172, 153, 66, 0.76);
+    border: solid 3px rgba(172, 153, 66, 0.76);
 
     box-shadow: 7.5px 5px 15px rgba(31, 30, 30, 0.562);
 }
@@ -130,16 +129,42 @@ li {
 }
 
 .last-roll {
-    font-size: 3rem;
-    color: rgba(172, 153, 66, 0.897);
+    font-size: 3.3rem;
+    color: rgba(190, 168, 69, 0.897);
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgba(131, 111, 24, 0.959);
+    -webkit-text-stroke-color: rgba(117, 99, 19, 0.959);
     background-color: rgba(131, 111, 24, 0.349);
     border: solid 0.25rem rgba(172, 153, 66, 0.959);
     border-radius: 2rem;
     padding: 0 2rem;
 
     box-shadow: 7.5px 5px 15px rgba(48, 48, 23, 0.493);
+}
+
+.change {
+    animation: flashChange 350ms ease-out;
+}
+
+/* ANIMATIONS */
+
+@keyframes flashChange {
+    0% {
+        opacity: 1;
+        background-color: rgba(209, 182, 63, 0.5);
+
+        box-shadow: 7.5px 5px 15px rgba(48, 48, 23, 0.493);
+    }
+    30% {
+        opacity: 0.8;
+
+        box-shadow: 5px 1px 18px rgba(51, 51, 22, 0.459);
+    }
+    100% {
+        opacity: 1;
+        background-color: rgba(131, 111, 24, 0.349);
+
+        box-shadow: 7.5px 5px 15px rgba(48, 48, 23, 0.493);
+    }
 }
 
 /* MEDIA QUERIES */
@@ -198,6 +223,9 @@ li {
     }
     .header-text {
         top: 0.5rem;
+    }
+    .last-roll {
+        font-size: 3rem;
     }
 }
 
